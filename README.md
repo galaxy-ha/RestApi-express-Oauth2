@@ -39,4 +39,4 @@ Authorization: Basic Base64Encode(<yourClientId>:<yourClientSecret>)
 Encode your Client ID and Client secret (join with a : character) to create this header.
 
 You can use [base64encode](https://www.base64encode.org/) to base64 encode these values manually if you’d like to play around with it.
-
+Once you’ve done this, you should have a header field that looks something like this: Authorization: Basic **MG9haW94OGJtc0JLXhIYjNjMWJITVdxVlhrdTMwaDc6MktxRQ1FaTWVhdXBvbWdCOXZiNkNPOXBtMnFjSw
