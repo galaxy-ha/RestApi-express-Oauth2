@@ -41,3 +41,9 @@ Encode your Client ID and Client secret (join with a : character) to create this
 You can use [base64encode](https://www.base64encode.org/) to base64 encode these values manually if you’d like to play around with it.
 Once you’ve done this, you should have a header field that looks something like this: 
 **Authorization: Basic MG9haW94OGJtc0JLXhIYjNjMWJITVdxVlhrdTMwaDc6MktxRQ1FaTWVhdXBvbWdCOXZiNkNPOXBtMnFjSw**
+
+You then need to make a POST API call to your Org URL value (you obtained this in the Okta application setup step) plus /v1/token with the header grant_type=client_credentials.
+
+```CMD
+http -f POST https://{yourOktaDomain}/oauth2/default/v1/token 'Authorization: Basic MG9haW94OGJtc0JLXhIYjNjMWJITVdxVlhrdTMwaDc6MktxRQ1FaTWVhdXBvbWdCOXZiNkNPOXBtMnFjSw' grant_type=client_credentials scope=customScope
+```
