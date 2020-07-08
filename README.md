@@ -5,11 +5,11 @@ Token authentication is the hottest way to authenticate users to your web applic
 [Build a Simple App Using Okta for Token Authentication in Node + Express]( https://developer.okta.com/)
 ---------
 
-**Once you’re in the Okta dashboard, you will see an Org URL value on the top right of your screen. Save this value somewhere for later use, then click Application on the navigation menu
+ - Once you’re in the Okta dashboard, you will see an Org URL value on the top right of your screen. Save this value somewhere for later use, then click Application on the navigation menu
 
-**Click Add Application
+ - Click Add Application
 
-**Select Web, then click Next
+ - Select Web, then click Next
 
-**Enter the following settings then click Done
+ - Enter the following settings then click Done
 
