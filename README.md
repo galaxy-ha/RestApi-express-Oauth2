@@ -116,7 +116,28 @@ app.listen(port, () => console.log(`My App listening on port ${port}!`))
   http GET :3000/api/profile 'Authorization: Bearer eyJraWQiOiJ1dURLVTMxZWRvTi0wd0xMUnl1TW1vbmtBdi1OaFEwejZhWmxjdTN5NU8wIiwiYWxnIjoiUlMyNTYifQ.eyJ2ZXIiOjEsImp0aSI6IkFULjZoZS1fbndIcmpmSHl6bjg3bUhNLWNVUnBUNTg3RVFBT2N6Ym1QRTNkSkkiLCJpc3MiOiJodHRwczovL2Rldi04MTk2MzMub2t0YXByZXZpZXcuY29tL29hdXRoMi9kZWZhdWx0IiwiYXVkIjoiYXBpOi8vZGVmYXVsdCIsImlhdCI6MTU0Njc2NDc4OCwiZXhwIjoxNTQ2NzY4Mzg4LCJjaWQiOiIwb2Fpb3g4Ym1zQktWWGt1MzBoNyIsInNjcCI6WyJjdXN0b21TY29wZSJdLCJzdWIiOiIwb2Fpb3g4Ym1zQktWWGt1MzBoNyJ9.fZCRSMASYjQqH-gnqsQ1tJa7QN8UJZ-iPT4UZE6Voq8YsWefpyjjroMlDzkSJZVRm_V47PGLrSu7sg6ranjZTTpx8f_Qk6zfDBfNTxnWpIqKXaotTE-foial9XBSMiyuArTVsbDtHBrb9EwBSqRzBmlI2uRP92bTggxGbgNMWnQukguD_pCGHiSeDN3Jy7R7EpKgSkDpRBhQXHp0Ly6cByUmjsseWEzZdCCiIVJh_m__KEoqX8vUC6xkUYdMHJ4GWH8kPb0Hcao2jkAJBSKQKose8a5vxDS-WwpWO482NyVxNDvxBgCIfn1tG-qL4Vbdxokw41o2M81MoqgdNZGHQA'
   ```
 
-# HOW TO RUN THIS APPLICATION
-- git clone 
+# HOW TO RUN AND TEST THIS APPLICATION
+ - git clone https://github.com/galaxy-ha/RestApi-express-Oauth2.git
+ - cd RestApi-express-Oauth2
+ - npm install
+ - npm install jsdom
+ - npm install xmlhttprequest
+ - npm install --save jquery
+ - npm install dotenv
+ - npm install -g nodemon
+ 
+ $ nodemon run start
+ -----
+ in another terminal or Postman run these commands:
+ ```CMD
+ http -f POST https://dev-381442.okta.com/oauth2/default/v1/token 'Authorization: Basic MG9hamt2aXEybUJDUFFFQUw0eDY6and3dUZNNWVpbkV5VGpjR1JUaGF5MERZT1dQelQ4ZXBLOTFfUVh4VA' grant_type=client_credentials scope=customScope
+ ```
+ **save the token**
+ ```CMD
+ http GET :3000/client/policy/Britney/a0ece5db-cd14-4f21-812f-966633e7be86
+  ```
+ ```CMD
+ http GET :3000/client/policy/Britney/a0ece5db-cd14-4f21-812f-966633e7be86 'Authorization: Bearer REPLACE_YOUR_TOKEN_HERE'
+  ```
 
 
