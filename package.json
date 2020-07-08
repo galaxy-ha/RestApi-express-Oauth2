@@ -1,0 +1,19 @@
+{
+  "name": "apirestproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "standard",
+    "start": "node app.js"
+  },
+  "author": "himan",
+  "license": "ISC",
+  "dependencies": {
+    "@okta/jwt-verifier": "0.0.14",
+    "dotenv": "^8.2.0",
+    "express": "^4.16.4",
+    "jquery": "^3.5.1",
+    "jsdom": "^16.2.2"
+  }
+}
